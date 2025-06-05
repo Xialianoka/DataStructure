@@ -5,12 +5,12 @@
 
 class DataStructure {
  public:
-  // 析构函数
   virtual ~DataStructure() = default;
 
-  // 基本操作的接口，由派生类实现
+  // 输出所有元素
   virtual void Print() const = 0;
 
+  // 数据结构的名称
   virtual std::string Name() const = 0;
 };
 

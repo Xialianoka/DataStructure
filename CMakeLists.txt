@@ -18,12 +18,13 @@ FetchContent_MakeAvailable(googletest)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 add_executable(DataStructures
-    main.cc
+    src/main.cc
 )
 
-add_library(SeqList src/SeqList.cc)
+add_library(SequentialList INTERFACE)
+target_include_directories(SequentialList INTERFACE include)
 
-target_link_libraries(DataStructures SeqList)
+target_link_libraries(DataStructures SequentialList)
 
 # data_structures_test
 enable_testing()
